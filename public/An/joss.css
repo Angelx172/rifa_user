@@ -1,0 +1,54 @@
+.continuo{
+    background-color: rgb(255, 255, 255);
+     display: flex;
+     justify-content: center;
+     column-gap: 20px;
+}
+.dinero{
+
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+.wq{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+.wq button{
+    width: 30px;
+    height: 30px;
+}
+.wq .NA{
+    background-color: white;
+    color: white;
+    border-color: black;
+}
+.wq .NE{
+    background-color: yellow;
+    color: yellow;
+    border-color: rgb(0, 0, 0);
+}
+.dinero h1{
+    text-align: center;
+    justify-content: center;
+    color: rgb(22, 42, 223);
+}
+.dinero .N{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-top: 10px;
+}
+.lista{
+    width: 500px;
+    margin-top: 50px;
+}
+
+.lista button{
+    width: 40px;
+    height: 40px;
+}

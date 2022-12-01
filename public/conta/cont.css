@@ -1,0 +1,72 @@
+.mundo{
+    background-color: rgb(255, 255, 255);
+     display: flex;
+     justify-content: center;
+     column-gap: 20px;
+     margin-top: 10%;
+     justify-content: space-evenly;
+}
+.perfil{
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+img{
+       width: 300px;
+       height: 300px;
+}
+.moni{
+    width: 50%;
+    height: 50%;
+}
+.moni .na{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    margin-top: 10px;
+}
+.borde{
+    display: flex;
+    background-color: yellow;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+.th{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+.th1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+.th2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+.borde h3{
+    text-align: center;
+    font-size: 30px;
+}
+.borde img{
+    width: 80px;
+    height: 80px;
+}

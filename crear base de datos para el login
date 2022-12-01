@@ -1,0 +1,11 @@
+//Crear base de datos en phpmyadmin llamada: rifa_user
+
+//ejecuten el comando
+php artisan migrate
+//esto es para pasar la tabla de los usuarios
+
+
+//esto es para insertar un usuario admin
+php artisan db:seed
+//correo a@a.com
+//contraseña: 1234
