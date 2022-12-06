@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RifaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +39,49 @@ Route::get('/logout', [SessionController::class, 'destroy'])
 ->name('login.destroy');
 
 //middleware auth.admin para paginas exclusivas del administrador
+//ruta de index del crud del administrador
 Route::get('/admin', [AdminController::class, 'index'])
 ->middleware('auth.admin')
 ->name('admin.index');
+//ruta de index de rifas
+Route::get('rifa_a/listar', [RifaController::class, 'index_a'])
+->middleware('auth.admin')
+->name('admin.rifa_a');
+//ruta de index de rifas activas
+Route::get('rifa_ac/listar', [RifaController::class, 'index_ac'])
+->middleware('auth.admin')
+->name('admin.rifa_ac');
+//ruta de index de rifas finalizadas
+Route::get('rifa_af/listar', [RifaController::class, 'index_af'])
+->middleware('auth.admin')
+->name('admin.rifa_af');
+//ruta de index de rifas inactivas
+Route::get('rifa_ai/listar', [RifaController::class, 'index_ai'])
+->middleware('auth.admin')
+->name('admin.rifa_ai');
+//ruta de formulario de rifas activas
+Route::get('rifa_a/agregar', [RifaController::class, 'create_a'])
+->middleware('auth.admin')
+->name('admin.rifa_a_create');
+//ruta de insertar rifa
+Route::post('rifa_a/guardar', [RifaController::class, 'store_a'])
+->middleware('auth.admin')
+->name('rifa.store');
+//formulario actualizar
+Route::get('rifa_a/edit/{id}', [RifaController::class, 'edit_a'])
+->middleware('auth.admin')
+->name('admin.rifa_a_edit');
+//actualizar
+Route::put('rifa/update/{id}', [RifaController::class, 'update_a'])
+->middleware('auth.admin')
+->name('rifa.update_a');
+//eliminar
+Route::delete('rifa/delete/{id}', [RifaController::class, 'destroy_a'])
+->middleware('auth.admin')
+->name('rifa.destroy_a');
+
+
+
 
 //vistas del usuario
 //index del usuario
