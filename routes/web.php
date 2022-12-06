@@ -43,6 +43,32 @@ Route::get('/logout', [SessionController::class, 'destroy'])
 Route::get('/admin', [AdminController::class, 'index'])
 ->middleware('auth.admin')
 ->name('admin.index');
+
+//tabla de usuarios
+Route::get('admin_u/listar', [AdminController::class, 'ver_usuarios'])
+->middleware('auth.admin')
+->name('admin.usuarios');
+//crear usuario
+Route::get('admin_u/agregar', [AdminController::class, 'crear_usuarios'])
+->middleware('auth.admin')
+->name('admin.usuarios_create');
+//formulario actualizar
+Route::get('admin_u/edit/{id}', [AdminController::class, 'edit_u'])
+->middleware('auth.admin')
+->name('admin.usuarios_edit');
+//actualizar
+Route::put('admin_u/update/{id}', [AdminController::class, 'update_u'])
+->middleware('auth.admin')
+->name('user.update');
+//eliminar
+Route::delete('admin_u/delete/{id}', [AdminController::class, 'destroy_u'])
+->middleware('auth.admin')
+->name('user.destroy');
+
+//ruta de insertar rifa
+Route::post('admin_u/guardar', [AdminController::class, 'guardar_usuarios'])
+->middleware('auth.admin')
+->name('usuario.store');
 //ruta de index de rifas
 Route::get('rifa_a/listar', [RifaController::class, 'index_a'])
 ->middleware('auth.admin')

@@ -17,7 +17,7 @@
                 <a href="{{ route('admin.rifa_ac') }}" class="btn btn-dark">Rifas Activas</a>
                 <a href="{{ route('admin.rifa_af') }}" class="btn btn-dark">Rifas Finalizadas</a>
                 <a href="{{ route('admin.rifa_ai') }}" class="btn btn-dark">Rifas Inactivas</a>
-                <a href="" class="btn btn-dark">Usuarios</a>
+                <a href="{{ route('admin.usuarios') }}" class="btn btn-dark">Usuarios</a>
                 <a href="" class="btn btn-dark">Recibos</a>
                 <a href="" class="btn btn-dark">Sorteo</a>
                 <a href="{{ route('login.destroy') }}" class="btn btn-danger">Cerrar Sesión</a>
