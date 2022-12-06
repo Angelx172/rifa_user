@@ -1,0 +1,44 @@
+#principal{
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mago {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.mago .contenedor{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2ox rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin:20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgb(226, 226, 21);
+}
+.con iframe{
+    align-items: center;
+    justify-content: center;
+}
+.con img{
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+h2{
+    justify-content: center;
+    text-align: center;
+}
+p{
+    justify-content: center;
+    text-align: center;
+}

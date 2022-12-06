@@ -110,37 +110,43 @@ Route::delete('rifa/delete/{id}', [RifaController::class, 'destroy_a'])
 
 
 //vistas del usuario
-//index del usuario
-Route::get('/index', function(){
-    return view('usuario.index');
-});
-
-Route::get('/sorteos', function(){
-    return view('usuario.sorteos');
-});
-
-Route::get('/ganadores', function(){
-    return view('usuario.ganadores');
-});
-
-Route::get('/contacto', function(){
-    return view('usuario.contatos');
-});
-
-Route::get('/mango', function(){
-    return view('usuario.regritar');
-});
-
-Route::get('/info', function(){
-    return view('usuario.vis_sorteo');
-});
-
-Route::get('/tike', function(){
-    return view('usuario.lista');
-});
+//ruta de index con rifas
+Route::get('index/listar', [RifaController::class, 'index_u'])
+->middleware('auth')
+->name('usuario.index_u');
 
 
 
-Route::get('/coca', function(){
-    return view('usuario.tike');
-});
+
+// Route::get('/index', function(){
+//     return view('usuario.sorteos');
+// });
+
+// Route::get('/sorteos', function(){
+//     return view('usuario.sorteos');
+// });
+
+// Route::get('/ganadores', function(){
+//     return view('usuario.ganadores');
+// });
+
+
+// Route::get('/info', function(){
+//     return view('usuario.info');
+// });
+
+
+// Route::get('/ticket', function(){
+//     return view('usuario.ticket');
+// });
+
+// Route::get('/perfil_usu', function(){
+//     return view('usuario.perfil_usu');
+// });
+
+// Route::get('/vista_recibos', function(){
+//     return view('usuario.vista_recibos');
+// });
+// Route::get('/welcome', function(){
+//     return view('usuario.welcome');
+// });
